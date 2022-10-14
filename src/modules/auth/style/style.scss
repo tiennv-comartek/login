@@ -1,0 +1,66 @@
+.page_login {
+  background-color: white;
+
+  .language {
+    padding: 15px 0px 15px 0px;
+    margin-right: 55px;
+    font-size: 18px;
+    color: blue;
+  }
+
+  .form_login {
+    padding-left: 100px;
+
+    .login {
+      margin-right: 50px;
+
+      .icon_web {
+        text-align: center;
+      }
+
+      .tiltle_login {
+        text-align: center;
+        font-size: 22px;
+        color: blue;
+        font-weight: 650;
+        margin-bottom: 30px;
+        margin-top: 15px;
+      }
+
+      .name_login,
+      .password {
+        border-radius: 5px;
+        border: 1px solid blue;
+        font-size: 20px;
+        color: blue !important;
+      }
+
+      .forget_pass,
+      .remember_pass {
+        font-size: 18px;
+       color:rgba(28, 128, 0, 0.685)
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .page_login {
+    .language {
+      margin-right: 20px;
+    }
+
+    .form_login {
+      padding-left: 0;
+
+      .login {
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+
+      .btn_submit {
+        width: 100%;
+      }
+    }
+  }
+}
