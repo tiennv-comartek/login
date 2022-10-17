@@ -28,19 +28,11 @@ const menu = (
     items={[
       {
         key: "1",
-        label: (
-          <a >
-            Tiếng Việt
-          </a>
-        ),
+        label: 'Tiếng Việt',
       },
       {
         key: "2",
-        label: (
-          <a>
-            Tiếng Anh
-          </a>
-        ),
+        label: 'Tiếng Anh',
       },
     ]}
   />
@@ -48,9 +40,6 @@ const menu = (
 
 
 const Login=(props:any)=> {
-
-
-
   const { onLogin } = useLogin();
   const onFinish = (value:any) => {
     onLogin(value);

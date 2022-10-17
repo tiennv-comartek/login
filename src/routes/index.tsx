@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Login from "../modules/auth/pages/Login";
 import { RouteAuth, routerAuth } from "../modules/auth/router";
