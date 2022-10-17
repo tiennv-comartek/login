@@ -128,15 +128,6 @@ function Login() {
                         Đăng nhập
                       </Button>
                     </Form.Item>
-                    <Form.Item>
-                      <Button
-                        type="primary"
-                        htmlType="submit"
-                        className="btn_submit"
-                      >
-                        Đăng nhập
-                      </Button>
-                    </Form.Item>
                   </Form>
                 </div>
               </Card>
