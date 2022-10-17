@@ -1,4 +1,4 @@
-import  { Fragment, } from "react";
+import React, { Fragment } from "react";
 
 import {
   Col,
@@ -13,12 +13,9 @@ import {
   Input,
   Checkbox,
   Button,
-
-
 } from "antd";
 import loginImg from "../../../assets/images/banner.png";
 import logo from "../../../assets/images/logo.png";
-import useLogin from "../hooks/useLogin";
 
 const menu = (
   <Menu
@@ -26,7 +23,11 @@ const menu = (
       {
         key: "1",
         label: (
-          <a >
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.antgroup.com"
+          >
             Tiếng Việt
           </a>
         ),
@@ -34,7 +35,11 @@ const menu = (
       {
         key: "2",
         label: (
-          <a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.aliyun.com"
+          >
             Tiếng Anh
           </a>
         ),
@@ -44,13 +49,7 @@ const menu = (
 );
 
 function Login() {
-  const { onLogin } = useLogin();
-  const onFinish = (value:any) => {
-    onLogin(value);
- }
-
   return (
-   
     <Fragment>
       <Layout className="page_login">
         <div className="language">
@@ -74,8 +73,7 @@ function Login() {
                 </div>
                 <div className="tiltle_login">Đăng nhập</div>
                 <div>
-                  <Form
-                  onFinish={onFinish}>
+                  <Form>
                     <Form.Item
                       name="username"
                       rules={[
@@ -130,7 +128,15 @@ function Login() {
                         Đăng nhập
                       </Button>
                     </Form.Item>
-                   
+                    <Form.Item>
+                      <Button
+                        type="primary"
+                        htmlType="submit"
+                        className="btn_submit"
+                      >
+                        Đăng nhập
+                      </Button>
+                    </Form.Item>
                   </Form>
                 </div>
               </Card>
