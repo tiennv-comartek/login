@@ -1,5 +1,5 @@
 import { notification } from 'antd';
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { systemRoutes } from '../../../routes';
 
@@ -11,6 +11,16 @@ const useLogin = () => {
                 message: 'Đăng nhập thành công...'
             })
             navigate(systemRoutes.HOME_PAGE);
+             localStorage.setItem('name', value.username);
+           
+           
+            if (localStorage.getItem('name')===null)
+            {
+                console.log('a')
+            }
+            else {
+                console.log('b')
+            }
         }
         else {
             notification.open({

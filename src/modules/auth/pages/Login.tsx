@@ -19,6 +19,7 @@ import {
 import loginImg from "../../../assets/images/banner.png";
 import logo from "../../../assets/images/logo.png";
 import useLogin from "../hooks/useLogin";
+import checkLogin from "../hoc/checkLogin";
 
 const menu = (
   <Menu
@@ -43,7 +44,7 @@ const menu = (
   />
 );
 
-function Login() {
+const Login=(props:any)=> {
   const { onLogin } = useLogin();
   const onFinish = (value:any) => {
     onLogin(value);
@@ -142,4 +143,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default checkLogin(Login);
