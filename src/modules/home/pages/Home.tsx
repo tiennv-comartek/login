@@ -1,10 +1,12 @@
 import { Avatar } from "antd";
 import { useEffect, useState } from "react";
+import checkLogin from "../../auth/hoc/checkLogin";
 
-function Home() {
+const Home=()=> {
   const [loading, setLoanding] = useState<boolean>(false);
   const [error, setError] = useState<any>(null);
   const [data, setData] = useState<any>([]);
+
   useEffect(() => {
     fetch("https://randomuser.me/api/")
       .then(res => res.json())
@@ -18,7 +20,8 @@ function Home() {
           setLoanding(true);
           setError(error);
         });
-  },[] );
+  }, []);
+  
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!loading) {
@@ -33,4 +36,4 @@ function Home() {
     )
   }
 }
-export default Home;
+export default checkLogin(Home);
