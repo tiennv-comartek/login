@@ -1,12 +1,13 @@
 import { notification } from "antd";
 
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { systemRoutes } from "../../../routes";
 
 const useLogin = () => {
   const navigate = useNavigate();
+
   const onLogin = useCallback((value: any): any => {
     if (
       (value.username === "ngocxinxu@gmail.com" && value.password === "123") ||
@@ -15,22 +16,17 @@ const useLogin = () => {
       notification.open({
         message: "Đăng nhập thành công...",
       });
+      localStorage.setItem("my_login", JSON.stringify(value.username));
+      // storing input name
       navigate(systemRoutes.HOME_PAGE);
-
-      localStorage.setItem("name", value.username);
-
-      if (localStorage.getItem("name") === null) {
-        console.log("a");
-      } else {
-        console.log("b");
-      }
     } else {
       notification.open({
         message: "Tên tài khoản hoặc mật khẩu không đúng!",
       });
-
+      localStorage.setItem("my_login", "");
       navigate(systemRoutes.LOGIN_ROUTE);
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
