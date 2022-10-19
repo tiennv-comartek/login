@@ -1,6 +1,5 @@
-
 import { createBrowserRouter, RouteObject } from "react-router-dom";
-
+import MasterLayout from "../components/layout/MasterLayout";
 import { RouteAuth, routerAuth } from "../modules/auth/router";
 import { routeDashboard, RoutesDashboard } from "../modules/dashboard/router";
 import Home from "../modules/home/pages/Home";
@@ -14,7 +13,7 @@ export const systemRoutes = {
 const routers: RouteObject[] = [
      ...routerAuth ,
      {
-        element: <Home />,
+        element: <MasterLayout />,
     children: [
                 ...routeDashboard,
             ],
