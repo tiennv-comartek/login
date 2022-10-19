@@ -1,15 +1,24 @@
+
 import { createBrowserRouter, RouteObject } from "react-router-dom";
+
 import { RouteAuth, routerAuth } from "../modules/auth/router";
-import { RouteHome, routerHome } from "../modules/home/router";
+import { routeDashboard, RoutesDashboard } from "../modules/dashboard/router";
+import Home from "../modules/home/pages/Home";
+
 
 export const systemRoutes = {
     ...RouteAuth,
-    ...RouteHome,
+    ...RoutesDashboard,
 };
 
 const routers: RouteObject[] = [
-    ...routerAuth,
-    ...routerHome,
+     ...routerAuth ,
+     {
+        element: <Home />,
+    children: [
+                ...routeDashboard,
+            ],
+    }
 ]
 
 

@@ -1,66 +1,57 @@
-.page_login {
-  background-color: white;
-
-  .language {
-    padding: 15px 0px 15px 0px;
-    margin-right: 55px;
-    font-size: 18px;
-    color: blue;
-  }
-
-  .form_login {
-    padding-left: 100px;
-
-    .login {
-      margin-right: 50px;
-
-      .icon_web {
-        text-align: center;
-      }
-
-      .tiltle_login {
-        text-align: center;
-        font-size: 22px;
-        color: blue;
-        font-weight: 650;
-        margin-bottom: 30px;
-        margin-top: 15px;
-      }
-
-      .name_login,
-      .password {
-        border-radius: 5px;
-        border: 1px solid blue;
-        font-size: 20px;
-        color: blue !important;
-      }
-
-      .forget_pass,
-      .remember_pass {
-        font-size: 18px;
-       color:rgba(28, 128, 0, 0.685)
-      }
-    }
-  }
+.user_setting {
+  padding: 10px 30px 10px 30px;
 }
+.menu {
+  padding: 0px 30px 0px 30px;
+  background-color: #8aac00;
+  font-size: 16px;
 
-@media only screen and (max-width: 980px) {
-  .page_login {
-    .language {
-      margin-right: 20px;
+  .menu_left {
+    padding: 3px 0px 3px 0px;
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      .item {
+        margin-left: 20px;
+        :hover{
+          background-color: #608200;
+          border: 1px solid #608200;
+          border-radius: 5px;
+        }
+      }
+      .item_one {
+        margin-left: 20px;
+        :hover{
+          background-color: #608200;
+          border: 1px solid #608200;
+          border-radius: 5px;
+        }
+      }
+      a {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border:1px solid #8aac00;
+        color: white;
+      }
+      
     }
-
-    .form_login {
-      padding-left: 0;
-
-      .login {
-        margin-right: 15px;
-        margin-left: 15px;
-      }
-
-      .btn_submit {
-        width: 100%;
-      }
+  }
+  .menu_right {
+    display: flex;
+    justify-content: center;
+    padding: 3px 0px 3px 0px;
+    .item_right {
+      background-color: white;
+      color: black;
+      padding: 10px 20px 10px 20px;
+      border: 1px solid white;
+      border-radius: 4px;
     }
   }
 }
