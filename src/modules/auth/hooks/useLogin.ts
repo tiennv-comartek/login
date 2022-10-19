@@ -1,6 +1,6 @@
 import { notification } from "antd";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback,  } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { systemRoutes } from "../../../routes";
@@ -18,7 +18,7 @@ const useLogin = () => {
       });
       localStorage.setItem("my_login", JSON.stringify(value.username));
       // storing input name
-      navigate(systemRoutes.HOME_PAGE);
+      navigate(systemRoutes.DASH_BOARD);
     } else {
       notification.open({
         message: "Tên tài khoản hoặc mật khẩu không đúng!",
